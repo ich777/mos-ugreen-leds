@@ -1,0 +1,48 @@
+{
+  "enabled": true,
+  "power": {
+    "enabled": true,
+    "color": "#ffffff",
+    "brightness": 255,
+    "mode": "on",
+    "on_ms": 1000,
+    "off_ms": 1000
+  },
+  "network": {
+    "enabled": true,
+    "interface": "auto",
+    "color": "#ffa500",
+    "brightness": 255,
+    "blink_tx": true,
+    "blink_rx": true,
+    "blink_interval": 200,
+    "color_mode": "static",
+    "color_100": "#00ff00",
+    "color_1000": "#0000ff",
+    "color_2500": "#ffff00",
+    "color_5000": "#ff00ff",
+    "color_10000": "#ffffff",
+    "dynamic_color_low": "#ff0000",
+    "dynamic_color_high": "#00ff00",
+    "dynamic_speed_low": 0,
+    "dynamic_speed_high": 10000,
+    "check_gateway": false,
+    "color_gateway_unreachable": "#ff0000",
+    "check_interval": 60
+  },
+  "disks": {
+    "enabled": true,
+    "mapping": "ata",
+    "slot_map": [],
+    "brightness": 255,
+    "invert": true,
+    "refresh_interval": 0.1,
+    "color_health": "#ffffff",
+    "per_disk_colors": {},
+    "check_standby": true,
+    "standby_interval": 1,
+    "color_standby": "#0000ff",
+    "online_interval": 5,
+    "color_unavail": "#ff0000"
+  }
+}
