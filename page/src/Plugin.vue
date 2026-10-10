@@ -8,7 +8,6 @@
       <!-- Status Card -->
       <v-card class="mb-4 pa-0">
         <v-card-title class="d-flex align-center">
-          <v-icon class="mr-2">mdi-led-strip-variant</v-icon>
           <span>{{ $t('plugin_ugreen_leds.status') }}</span>
         </v-card-title>
         <v-card-text>
