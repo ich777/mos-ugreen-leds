@@ -198,18 +198,6 @@
               <v-col cols="6" md="3">
                 <v-switch v-model="settings.network.blink_rx" :label="$t('plugin_ugreen_leds.blink_rx')" inset color="green" hide-details />
               </v-col>
-              <v-col cols="6" md="3">
-                <v-text-field
-                  v-model.number="settings.network.blink_interval" type="number"
-                  :label="$t('plugin_ugreen_leds.blink_interval')" suffix="ms" density="comfortable" hide-details
-                />
-              </v-col>
-              <v-col cols="6" md="3">
-                <v-text-field
-                  v-model.number="settings.network.check_interval" type="number"
-                  :label="$t('plugin_ugreen_leds.check_interval')" suffix="s" density="comfortable" hide-details
-                />
-              </v-col>
             </v-row>
 
             <v-row>
@@ -338,27 +326,6 @@
               </v-col>
             </v-row>
 
-            <v-row>
-              <v-col cols="12" md="4">
-                <v-text-field
-                  v-model.number="settings.disks.refresh_interval" type="number" step="0.05" :min="0.05"
-                  :label="$t('plugin_ugreen_leds.refresh_interval')" suffix="s" density="comfortable" hide-details
-                />
-              </v-col>
-              <v-col cols="6" md="4">
-                <v-text-field
-                  v-model.number="settings.disks.standby_interval" type="number" :min="1"
-                  :disabled="!settings.disks.check_standby"
-                  :label="$t('plugin_ugreen_leds.standby_interval')" suffix="s" density="comfortable" hide-details
-                />
-              </v-col>
-              <v-col cols="6" md="4">
-                <v-text-field
-                  v-model.number="settings.disks.online_interval" type="number" :min="1"
-                  :label="$t('plugin_ugreen_leds.online_interval')" suffix="s" density="comfortable" hide-details
-                />
-              </v-col>
-            </v-row>
           </template>
         </v-card-text>
       </v-card>
