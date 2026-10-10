@@ -30,6 +30,9 @@ jobs:
           echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
           echo "Building version: $VERSION"
 
+      - name: Download UGREEN NAS icon
+        run: wget -O icon.png "https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/ugreennas.png" || echo '{}' > icon.png
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -55,6 +58,11 @@ jobs:
 
           install -m 755 ugreen-leds ${PKG_DIR}/usr/bin/plugins/ugreen-leds
           cp -R page/dist/ugreen-leds/* ${PKG_DIR}/var/www/mos-plugins/ugreen-leds/
+
+          # Copy icon
+          if [ -f icon.png ]; then
+            cp icon.png ${PKG_DIR}/var/www/mos-plugins/ugreen-leds/
+          fi
 
           cat > ${PKG_DIR}/DEBIAN/control << EOF
           Package: ugreen-leds-plugin
